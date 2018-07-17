@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinnerX {
+    content: "";
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-top: 2px solid coral;
+    border-right: 2px solid transparent;
+    animation: spinner 0.7s linear infinite;
+}
+
+#pageX {
+    display: none;
+    text-align: center;
+}
+
+img {
+    max-width: 150px;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.cupX {
+    width: 150px;
+    height: 180px;
+    border: 6px solid #262626;
+    border-radius: 15px;
+    border-top: 2px solid transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: url('../assets/water3.png');
+    background-repeat: repeat-x;
+    animation: animateX 10s linear infinite;
+    box-shadow: 0 0 0 6px #fff;
+}
+
+.cupX:before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+    border: 6px solid #fff;
+    margin-left: 156px;
+    margin-top: 25px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animateX {
+    0% {
+        background-position: left 0px top 180px;
+    }
+    40% {
+        background-position: left 1500px top 90px;
+    }
+    80% {
+        background-position: left 3000px top 10px;
+    }
+    100% {
+        background-position: left 5000px top 180px; 
+    }
+}
